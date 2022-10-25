@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var textMovie: UITextField!
     var movies = ["Cars","Cars2","Frozen","Frozen2","Smile","Up","The Little Mermaid","Lion King","Mulan","Aladdin","Beauty and the beast ","Pinocchio","Alice in Wonderland"]
     var selectMovie = ""
-    
+    var detail = ["Fun movies about Cars","Second movie about Cars",""]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,8 +41,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         if let cat = tableViewMovie.cellForRow(at: indexPath)?.textLabel?.text{
             selectMovie = cat
             print(selectMovie)
+            performSegue(withIdentifier: "movieSegue", sender: nil)
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let seg = segue.destination as! SecondViewController
+        seg.mt = selectMovie
+    }
+    
+    
     
    //Add movies
     //control drag the + bar button

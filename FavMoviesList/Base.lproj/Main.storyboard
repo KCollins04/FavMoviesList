@@ -59,11 +59,48 @@
                     <connections>
                         <outlet property="tableViewMovie" destination="wcf-Pa-Erv" id="te3-1M-92U"/>
                         <outlet property="textMovie" destination="FW2-G6-t5c" id="a3F-2a-bR4"/>
+                        <segue destination="Jic-Qc-jGG" kind="show" identifier="movieSegue" id="6eR-rt-2aP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="986.15384615384608" y="3.5545023696682461"/>
+        </scene>
+        <!--Movie Info-->
+        <scene sceneID="2Ub-P0-bet">
+            <objects>
+                <viewController id="Jic-Qc-jGG" customClass="SecondViewController" customModule="FavMoviesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4af-LV-HW5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biZ-se-qVq">
+                                <rect key="frame" x="71" y="190" width="227" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-hU-pkh">
+                                <rect key="frame" x="51" y="139" width="261" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ksx-b2-U9E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie Info" id="zfx-pA-fTe"/>
+                    <connections>
+                        <outlet property="movieInfoLabel" destination="biZ-se-qVq" id="QhK-ad-ezs"/>
+                        <outlet property="movieTitle" destination="Tur-hU-pkh" id="fuC-9Y-j2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWo-b8-Pd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941.5384615384614" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K9Q-sp-q3Z">
