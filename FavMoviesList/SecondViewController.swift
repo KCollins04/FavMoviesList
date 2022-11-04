@@ -12,7 +12,8 @@ class SecondViewController: UIViewController {
     
     
     @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieInfoLabel: UILabel!
+    
+    @IBOutlet weak var movieInfoTextView: UITextView!
     
     var mt: String!
     var info: String!
@@ -20,7 +21,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         movieTitle.text = mt
-        movieInfoLabel.text = info
+        movieInfoTextView.text = info
         // Do any additional setup after loading the view.
     }
     
